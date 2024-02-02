@@ -1,0 +1,259 @@
+/*Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@400;600;800&display=swap');
+
+/*Variables CSS*/
+:root {
+    --font: 'Rethink Sans', sans-serif;
+    --white: #f1f1f1;
+    --black: #1c1c1c;
+    --black2: #0f0e0e;
+    --orange: #e99337;
+}
+
+/*Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+/*Body */
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--black);
+}
+
+/*Header */
+header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 50px 80px;
+   z-index: 10000;
+}
+
+.logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+.nav,
+.buttons-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.button-menu {
+    display: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px;
+    background-image: linear-gradient(var(--orange), var(--orange));
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.4s;
+}
+
+.nav__link:hover {
+    background-size: 100% 2px;
+}
+
+.buttons-group__button {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--white);
+}
+
+.button-shop {
+    background-color: var(--orange);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+/*Main */
+.content {
+    position: relative;
+    top: 50px;
+    left: 280px;
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.content__text {
+    width: 450px;
+}
+
+.content__text h1 {
+    margin-bottom: 50px;
+    font-size: 3em;
+    color: var(--white);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.content__text h1 span {
+    font-size: 2em;
+    color: var(--orange);
+    font-weight: bolder;
+}
+
+.text__button {
+    text-decoration: none;
+    color: var(--orange);
+    padding: 15px 25px;
+    border: 2px solid var(--orange);
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.text__button:hover {
+    background-color: var(--orange);
+    color: var(--white)
+}
+
+.content__image {
+    display: grid;
+    place-items: center;
+    width: 500px;
+    height: 100%;
+}
+
+.content__image img {
+    width: 500px;
+}
+
+/*Box */
+.box {
+    position: relative;
+    top: -50px;
+    right: 0;
+    width: 700px;
+    height: 1500px;
+    background-color: var(--black2);
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+/*Cards */
+.cards {
+    display: flex;
+    gap: 60px;
+}
+
+.cards__card i {
+    color: var(--orange);
+    font-size: 1.4em;
+}
+
+.cards__card h3 {
+    color: var(--white);
+    font-size: 1.1em;
+}
+
+.cards__card p {
+    color: var(--white);
+}
+
+/*Redes sociales */
+.rrss {
+    position: absolute;
+    top: 33%;
+    left: 0;
+    margin-left: 80px;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rrss a {
+    font-size: 2.5em;
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.rrss a:hover {
+    color: var(--orange);
+}
+
+/* Pantallas largas*/
+@media screen and (max-width: 1200px) {
+    .content__text {
+        margin-left: 80px;
+    }
+
+    .content__text h1 {
+        font-size: 2.5em;
+    }
+
+    .content__image img {
+        width: 450px;
+    }
+}
+    
+/* Laptops */
+@media screen and (max-width: 992px) {
+    .nav {
+        display: none;
+    }
+
+    .nav.active {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        width: 350px;
+        height: 100vh;
+        padding-right: 80px;
+        background-color: var(var(--black2));
+    }
+
+    .nav.active .nav__link {
+        font-size: 1.2em;
+    }
+
+    .button-menu {
+        display: flex;
+    }
+}
+
